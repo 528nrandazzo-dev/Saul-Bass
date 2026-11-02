@@ -728,3 +728,108 @@ p {
     scroll-behavior: auto !important;
   }
 }
+
+/* Sticky navigation bar */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: padding 0.3s ease, background-color 0.3s ease,
+              box-shadow 0.3s ease;
+  background-color: var(--cream);
+  padding: 22px 6%;
+}
+
+/* Smaller navbar when scrolling */
+.site-header.scrolled {
+  padding: 10px 6%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Smoothly shrink the logo */
+.site-header .logo {
+  transition: font-size 0.3s ease;
+}
+
+.site-header.scrolled .logo {
+  font-size: 1.5rem;
+}
+
+/* Shrink the navigation links slightly */
+.site-header .navigation a {
+  transition: font-size 0.3s ease;
+}
+
+.site-header.scrolled .navigation a {
+  font-size: 0.85rem;
+}
+
+/* AWARDS SECTION */
+.awards {
+  padding: 100px 8%;
+  background-color: var(--cream);
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 45px;
+}
+
+.award-card {
+  padding: 30px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.award-card:hover {
+  transform: translateY(-8px);
+}
+
+.award-red {
+  background-color: var(--red);
+  color: white;
+}
+
+.award-yellow {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+.award-blue {
+  background-color: var(--navy);
+  color: white;
+}
+
+.award-year {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.award-card h3 {
+  font-family: "Anton", sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin: 25px 0 10px;
+}
+
+.award-card p {
+  line-height: 1.6;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .awards {
+    padding: 70px 6%;
+  }
+}

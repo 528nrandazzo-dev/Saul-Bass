@@ -277,11 +277,62 @@
 
     </section>
 
+<!-- AWARDS SECTION -->
+<section class="awards" id="awards">
+
+  <div class="section-heading">
+    <p class="section-label">Recognition — His Achievements</p>
+    <h2>Awards &<br>Recognition.</h2>
+    <p>
+      Throughout his career, Saul Bass received recognition
+      for his creativity and contributions to film and design.
+      Here are three important achievements.
+    </p>
+  </div>
+
+  <div class="awards-grid">
+
+    <article class="award-card award-red">
+      <span class="award-year">1968/1969</span>
+      <h3>Academy Award</h3>
+      <p>
+        Won for his short documentary film
+        <em>Why Man Creates</em>, in the Documentary
+        Short Subject category.
+      </p>
+    </article>
+
+    <article class="award-card award-yellow">
+      <span class="award-year">1965</span>
+      <h3>Venice Film Festival</h3>
+      <p>
+        Received the Lion of San Marco for Best Film
+        about Adolescence for his short film
+        <em>The Searching Eye</em>.
+      </p>
+    </article>
+
+    <article class="award-card award-blue">
+      <span class="award-year">1988</span>
+      <h3>Lifetime Achievement</h3>
+      <p>
+        Received a Lifetime Achievement Award from
+        the Art Directors Club of Los Angeles
+        for his contributions to design.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
 
     <!-- LATER LIFE AND LEGACY -->
     <section class="about" id="legacy">
 
-      <div class="about-graphic"></div>
+     <div class="about-graphic">
+  <img src="Saul-Bass.jpg" alt="Portrait of Saul Bass">
+</div>
 
       <div class="about-content">
 
@@ -340,6 +391,18 @@
     </footer>
 
   </main>
+
+<script>
+  const header = document.querySelector(".site-header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
 
 </body>
 
