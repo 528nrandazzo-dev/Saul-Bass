@@ -7,6 +7,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
+
 a {
   color: inherit;
   text-decoration: none;
@@ -174,9 +175,50 @@ p {
 }
 
 .feature-card {
+      width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    box-sizing: border-box;
   background-color: #f0e7d2;
   color: #191817;
   border: 3px solid #191817;
+}
+
+.feature-card img {
+  max-width: 100%;
+}
+
+/* Main card */
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Image section at the top */
+.card-art {
+    width: 100%;
+    height: 250px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+/* Image stays inside the image section */
+.card-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Text section underneath */
+.card-copy {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .card-art {
